@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PitchesAndNotesDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PitchesAndNotes.dbo.Members' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Grade" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Name" Type="nchar" MaxLength="55" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Major" Type="nchar" MaxLength="100" />
+    <Property Name="Classification" Type="nchar" MaxLength="25" />
+    <Property Name="BucketList" Type="nchar" MaxLength="250" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PitchesAndNotesDataModelStoreContainer">
+    <EntitySet Name="Members" EntityType="Self.Members" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Members].[Name] AS [Name], 
+    [Members].[Grade] AS [Grade], 
+    [Members].[Major] AS [Major], 
+    [Members].[Classification] AS [Classification], 
+    [Members].[BucketList] AS [BucketList], 
+    [Members].[Id] AS [Id]
+    FROM [dbo].[Members] AS [Members]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

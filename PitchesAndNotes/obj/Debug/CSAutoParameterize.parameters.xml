@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-PitchesAndNotes-20151223105146.mdf;Initial Catalog=aspnet-PitchesAndNotes-20151223105146;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Scott\\documents\\visual\ studio\ 2015\\Projects\\PitchesAndNotes\\PitchesAndNotes\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="LocalConnection-Web.config Connection String" description="LocalConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(local);Initial Catalog=PitchesAndNotes;User ID=RunFranks525;pwd=1048Boston" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Scott\\documents\\visual\ studio\ 2015\\Projects\\PitchesAndNotes\\PitchesAndNotes\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LocalConnection']/@connectionString" />
+  </parameter>
+  <parameter name="PitchesAndNotesEntities1-Web.config Connection String" description="PitchesAndNotesEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.MemberDataModel.csdl|res://*/Models.MemberDataModel.ssdl|res://*/Models.MemberDataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SCOTTSLAPTOP;initial catalog=PitchesAndNotes;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Scott\\documents\\visual\ studio\ 2015\\Projects\\PitchesAndNotes\\PitchesAndNotes\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PitchesAndNotesEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="PitchesAndNotesEntities-Web.config Connection String" description="PitchesAndNotesEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.EventModel.csdl|res://*/Models.EventModel.ssdl|res://*/Models.EventModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SCOTTSLAPTOP;initial catalog=PitchesAndNotes;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Scott\\documents\\visual\ studio\ 2015\\Projects\\PitchesAndNotes\\PitchesAndNotes\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PitchesAndNotesEntities']/@connectionString" />
+  </parameter>
+</parameters>
