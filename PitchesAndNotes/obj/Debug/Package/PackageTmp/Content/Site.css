@@ -179,8 +179,55 @@ textarea {
 
 .socialMediaRow{
     background-color: #333;
-    height:200px;
     padding-left:-15px;
+    min-height:200px;
+}
+
+.PitchLogin{
+    background-image:url(outsideLine.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    
+}
+
+.LoginBox{
+
+    background-color:rgba(255, 255, 255, .9);
+    position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+        width:400px;
+        height:400px;
+    border-radius:10px;
+    padding:15px;
+}
+
+.StartButton{
+     position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+        height:40px;
+    background-color:#7c0404;
+    padding:10px;
+    width:100px;
+    text-align:center;
+}
+
+.StartButton:hover{
+    transform:scale(1.25,1.25);
+    transition: ease-in .35s;
+    text-decoration:none;
+}
+
+.PitchLogin a{
+    color:white;
 }
 
 .twitter{
@@ -243,7 +290,7 @@ textarea {
 
 iframe{
     margin-top:50px;
-    margin-bottom:150px;
+    margin-bottom:100px;
     margin-left:auto;
     margin-right: auto;
 }

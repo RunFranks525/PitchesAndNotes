@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using PitchesAndNotes.Models;
 using PitchesAndNotes.ViewModels;
+using System.Net;
 
 namespace PitchesAndNotes.Controllers
 {
@@ -43,6 +44,12 @@ namespace PitchesAndNotes.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult IAmAPitch()
+        {
+            return View();
+        }
+
         public ActionResult Listen()
         {
             return View();
@@ -51,6 +58,35 @@ namespace PitchesAndNotes.Controllers
         public ActionResult Events()
         {
             return View(db.Events.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult AddAdministrators()
+        {
+            return View(db.Members.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult AddAdmin(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Member member = db.Members.Find(id);
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+            return View("Details", member);
+        }
+
+        public ActionResult AddAdmin(string email)
+        {
+            ApplicationUser user = db.Users.Where(model => model.Email.Equals(email)).First();
+            
+
+            return RedirectToAction("AddAdministrators", "Home");
         }
 
         public ActionResult Auditions()

@@ -201,23 +201,23 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Member.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Member.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Member.cs">
-      <DependentUpon>MemberDataModel.tt</DependentUpon>
+      <DependentUpon>Member.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MemberDataModel.Context.cs">
+    <Compile Include="Models\Member.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MemberDataModel.Context.tt</DependentUpon>
+      <DependentUpon>Member.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\MemberDataModel.cs">
+    <Compile Include="Models\Member1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MemberDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MemberDataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MemberDataModel.edmx</DependentUpon>
+      <DependentUpon>Member.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -281,31 +281,31 @@
       <DependentUpon>EventModel.edmx</DependentUpon>
       <LastGenOutput>EventModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\MemberDataModel.Context.tt">
+    <Content Include="Models\Member.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MemberDataModel.edmx</DependentUpon>
-      <LastGenOutput>MemberDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>Member.edmx</DependentUpon>
+      <LastGenOutput>Member.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\MemberDataModel.tt">
+    <Content Include="Models\Member.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MemberDataModel.edmx</DependentUpon>
-      <LastGenOutput>MemberDataModel.cs</LastGenOutput>
+      <DependentUpon>Member.edmx</DependentUpon>
+      <LastGenOutput>Member1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\MemberDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MemberDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\MemberDataModel.edmx.diagram">
-      <DependentUpon>MemberDataModel.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\EventModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EventModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\EventModel.edmx.diagram">
       <DependentUpon>EventModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Member.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Member.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Member.edmx.diagram">
+      <DependentUpon>Member.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\PitchesAndNotes.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -372,6 +372,9 @@
     <Content Include="Views\Home\UpdateEvents.cshtml" />
     <Content Include="Views\EditorTemplates\EventModel.cshtml" />
     <Content Include="Views\DisplayTemplates\Event.cshtml" />
+    <Content Include="Views\Home\AddAdministrators.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\IAmAPitch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

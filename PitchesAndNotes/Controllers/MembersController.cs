@@ -48,7 +48,7 @@ namespace PitchesAndNotes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Grade,Major,Classification,BucketList,Id")] Member member)
+        public ActionResult Create([Bind(Include = "Name,Grade,Major,Classification,BucketList,Id,Email")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace PitchesAndNotes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,Grade,Major,Classification,BucketList,Id")] Member member)
+        public ActionResult Edit([Bind(Include = "Name,Grade,Major,Classification,BucketList,Id,Email")] Member member)
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PitchesAndNotes.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-xs-push-2">
+        <h2>Add Administrator</h2>
+        <p>
+            This feature will be added shortly, but for the time being email me at <a href="emailto:stfranklin@wisc.edu">stfranklin@wisc.edu</a>.
+        </p>
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+        </div>
+        @using (Html.BeginForm("AddAdmin", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="col-xs-12">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </div>
+                    @*<div class="col-xs-2">
+                        @Html.ActionLink("Add Admin", "AddAdmin", new { id = item.Id }) 
+                    </div>*@
+                </div>
+            }
+        }
+    </div>
+</div>

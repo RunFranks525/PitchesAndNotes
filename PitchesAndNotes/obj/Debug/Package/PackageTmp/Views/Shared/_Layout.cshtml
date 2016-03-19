@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Pitches And Notes</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -37,6 +37,10 @@
                         </ul>
                     </li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Are You a Pitch?", "IAmAPitch", "Home")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -52,11 +56,23 @@
                 </div>
             </div>
             <div class="row socialMediaRow">
-                <div class="col-xs-10 col-xs-push-2">
+                <div class="hidden-xs hidden-sm col-md-10 col-md-push-2">
                     <h2 style="color:white;padding-top:25px;">Social</h2>
                     <br />
                     <br />
                     <a href="https://twitter.com/pitchesandnotes" class="twitter socButton">Twitter</a> <a href="https://www.facebook.com/pitchesandnotes/" class="facebook socButton">Facebook</a> <a href="https://www.instagram.com/pitchesandnotes/" class="insta socButton">Instagram</a>
+                </div>
+                <div class="hidden-md hidden-lg col-xs-12">
+                    <h2 style="color:white;padding-top:25px;">Social</h2>
+                    <br />
+                    <br />
+                    <a href="https://twitter.com/pitchesandnotes" class="twitter socButton">Twitter</a>
+                </div>
+                <div class="hidden-md hidden-lg col-xs-12">
+                    <a href="https://www.facebook.com/pitchesandnotes/" class="facebook socButton">Facebook</a> 
+                </div>
+                <div class="hidden-md hidden-lg col-xs-12">
+                    <a href="https://www.instagram.com/pitchesandnotes/" class="insta socButton">Instagram</a>
                 </div>
             </div>
             <div class="row">

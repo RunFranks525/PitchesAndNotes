@@ -67,3 +67,4 @@ C:\Users\Scott\documents\visual studio 2015\Projects\PitchesAndNotes\PitchesAndN
 C:\Users\Scott\documents\visual studio 2015\Projects\PitchesAndNotes\PitchesAndNotes\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Scott\documents\visual studio 2015\Projects\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.dll
 C:\Users\Scott\documents\visual studio 2015\Projects\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.pdb
+C:\Users\Scott\documents\visual studio 2015\Projects\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.csprojResolveAssemblyReference.cache

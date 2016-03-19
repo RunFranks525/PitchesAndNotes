@@ -13,10 +13,10 @@ namespace PitchesAndNotes.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PitchesAndNotesEntities1 : DbContext
+    public partial class PitchesAndNotesEntities3 : DbContext
     {
-        public PitchesAndNotesEntities1()
-            : base("name=PitchesAndNotesEntities1")
+        public PitchesAndNotesEntities3()
+            : base("name=PitchesAndNotesEntities3")
         {
         }
     
@@ -26,7 +26,5 @@ namespace PitchesAndNotes.Models
         }
     
         public virtual DbSet<Member> Members { get; set; }
-
-        public System.Data.Entity.DbSet<PitchesAndNotes.Models.Event> Events { get; set; }
     }
 }

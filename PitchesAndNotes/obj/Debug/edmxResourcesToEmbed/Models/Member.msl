@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="PitchesAndNotesDataModelStoreContainer" CdmEntityContainer="PitchesAndNotesEntities">
+  <EntityContainerMapping StorageEntityContainer="PitchesAndNotesModelStoreContainer" CdmEntityContainer="PitchesAndNotesEntities3">
     <EntitySetMapping Name="Members">
-      <EntityTypeMapping TypeName="PitchesAndNotesDataModel.Member">
+      <EntityTypeMapping TypeName="PitchesAndNotesModel.Member">
         <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Grade" ColumnName="Grade" />
           <ScalarProperty Name="Major" ColumnName="Major" />
           <ScalarProperty Name="Classification" ColumnName="Classification" />
           <ScalarProperty Name="BucketList" ColumnName="BucketList" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
