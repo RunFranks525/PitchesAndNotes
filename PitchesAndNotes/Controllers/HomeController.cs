@@ -50,7 +50,7 @@ namespace PitchesAndNotes.Controllers
 
         public ActionResult Events()
         {
-            return View();
+            return View(db.Events.ToList());
         }
 
         public ActionResult Auditions()
@@ -59,11 +59,6 @@ namespace PitchesAndNotes.Controllers
         }
 
         public ActionResult Merchandise()
-        {
-            return View();
-        }
-
-        public ActionResult Donors()
         {
             return View();
         }

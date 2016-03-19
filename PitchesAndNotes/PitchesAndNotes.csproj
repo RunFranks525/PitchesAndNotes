@@ -362,7 +362,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Listen.cshtml" />
     <Content Include="Views\Home\Members.cshtml" />
-    <Content Include="Views\Home\Donors.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Auditions.cshtml" />
     <Content Include="Views\Members\Create.cshtml" />
@@ -371,7 +370,8 @@
     <Content Include="Views\Members\Edit.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
     <Content Include="Views\Home\UpdateEvents.cshtml" />
-    <Content Include="Views\EditorTemplates\Event.cshtml" />
+    <Content Include="Views\EditorTemplates\EventModel.cshtml" />
+    <Content Include="Views\DisplayTemplates\Event.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

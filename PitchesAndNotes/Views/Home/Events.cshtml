@@ -1,4 +1,4 @@
-﻿
+﻿@model List<PitchesAndNotes.Models.Event>
 @{
     ViewBag.Title = "Events";
 }
@@ -13,6 +13,37 @@
             <h3>Pitches and Notes</h3>
         </hgroup>
     </section>
+    <div class="row homeContent">
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <h2>Upcoming Events</h2>
+            @if (User.IsInRole("Administrator"))
+            {
+                @Html.ActionLink("Update Events", "UpdateEvents", "Home")
+            }
+            @if(Model.Count() > 0)
+            {
+                <div class="row">
+                    @foreach (var Event in Model)
+                    {
+                        <div class="col-md-12">
+                            <h3 class="eventTitle">@Event.Title</h3>
+                            <h6 class="eventDate">@Event.Date.ToString("D")</h6>
+                            <hr class="hrSec" />
+                            <p class="edit" id="div_1">
+                                @Event.Description
+                            </p>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="col-xs-12">
+                    <h4>No Upcoming Events at this time.</h4>
+                </div>
+            }
+        </div>
+    </div>
 </section>
 
 

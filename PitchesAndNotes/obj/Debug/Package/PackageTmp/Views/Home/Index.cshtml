@@ -15,14 +15,23 @@
 <div class="row homeContent">
     <div class="col-xs-12 col-md-8 col-md-push-2">
         <h2>Upcoming Events</h2>
-        @if (User.IsInRole("Admin"))
+        @if (User.IsInRole("Administrator"))
         {
             @Html.ActionLink("Update Events", "UpdateEvents", "Home")
         }
         @if (Model.Events.Count > 0)
         {
             <div class="row">
-                @Html.EditorFor(x => x.Events)
+                @foreach(var Event in Model.Events){
+                    <div class="col-md-4">
+                        <h3 class="eventTitle">@Event.Title</h3>
+                        <h6 class="eventDate">@Event.Date.ToString("D")</h6>
+                        <hr class="hrSec" />
+                        <p class="edit" id="div_1">
+                            @Event.Description
+                        </p>
+                    </div>
+             }
             </div>
             <div class="row">
                 <div class="col-md-3 col-lg-push-9">
@@ -89,13 +98,13 @@
 </div>
 <div class="row homeContent">
     <div class="col-xs-12 col-md-8 col-md-push-2">
-        <h2>Announcement Title</h2>
+        <h2>Announcements</h2>
         @if (User.IsInRole("Admin"))
             {
             @Html.ActionLink("Update Announcements", "UpdateAnnouncement", "Home")
         }
         <hr />
-        <p class="announcementText"> &mdash; ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ipsum et nibh viverra pharetra.</p>
+        <p class="announcementText"> &mdash; Pitches and Notes will be performing their spring show, 'The Final Rose' on April 30th!</p>
     </div>
 </div>
 

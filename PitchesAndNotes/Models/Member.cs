@@ -7,6 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
 namespace PitchesAndNotes.Models
 {
     using System;
@@ -17,7 +18,9 @@ namespace PitchesAndNotes.Models
         public string Name { get; set; }
         public int Grade { get; set; }
         public string Major { get; set; }
+        [Display(Name = "Are you a Pitch or a Note?")]
         public string Classification { get; set; }
+        [Display(Name = "What's On Your Bucket List?")]
         public string BucketList { get; set; }
         public int Id { get; set; }
     }
