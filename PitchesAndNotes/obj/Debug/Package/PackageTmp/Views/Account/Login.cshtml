@@ -2,10 +2,12 @@
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
+    Layout = null;
+
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
+@*<h2>@ViewBag.Title.</h2>
+<div class="row">*@
     @*<div class="col-md-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -51,12 +53,42 @@
            @* }
         </section>
     </div>-->*@
-    <div class="col-md-12">
+    @*<div class="col-md-12">
         <section id="socialLoginForm">
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
         </section>
     </div>
-</div>
+</div>*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IAmAPitch</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-fluid PitchLogin">
+
+        @*@Html.Partial("_LoginPartial")*@
+        <div class="LoginBox">
+            <h2>Let's Get You Started</h2>
+            <hr />
+            @*<h4>We'll need to verify you're identity first.</h4>*@
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+
+
+            @*@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "StartButton" })*@
+
+            @*@Html.Partial("_LoginPartial")*@
+        </div>
+
+
+    </div>
+</body>
+</html>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

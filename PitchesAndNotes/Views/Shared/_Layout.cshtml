@@ -39,7 +39,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @if (!User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Are You a Pitch?", "IAmAPitch", "Home")</li>
+                        <li>@Html.ActionLink("Are You a Pitch?", "Login", "Account")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -55,24 +55,32 @@
                     <a id="scrollTopButton" href="#"><span class="glyphicon glyphicon-chevron-up"></span> Scroll Up</a>
                 </div>
             </div>
-            <div class="row socialMediaRow">
+            <div class="row socialMediaRow hidden-xs hidden-sm">
                 <div class="hidden-xs hidden-sm col-md-10 col-md-push-2">
                     <h2 style="color:white;padding-top:25px;">Social</h2>
                     <br />
                     <br />
                     <a href="https://twitter.com/pitchesandnotes" class="twitter socButton">Twitter</a> <a href="https://www.facebook.com/pitchesandnotes/" class="facebook socButton">Facebook</a> <a href="https://www.instagram.com/pitchesandnotes/" class="insta socButton">Instagram</a>
                 </div>
-                <div class="hidden-md hidden-lg col-xs-12">
-                    <h2 style="color:white;padding-top:25px;">Social</h2>
-                    <br />
-                    <br />
-                    <a href="https://twitter.com/pitchesandnotes" class="twitter socButton">Twitter</a>
+            </div>
+            <div class="row hidden-md hidden-lg">
+                <div class="col-xs-12">
+                    <h2 style="color:white;padding-top:25px; margin-left:25px;">Social</h2>
                 </div>
+            </div>
+            <div class="row hidden-md hidden-lg">
                 <div class="hidden-md hidden-lg col-xs-12">
-                    <a href="https://www.facebook.com/pitchesandnotes/" class="facebook socButton">Facebook</a> 
+                    <a href="https://twitter.com/pitchesandnotes" class="twitter socButtonSmall">Twitter</a>
                 </div>
+            </div>
+            <div class="row hidden-md hidden-lg">
                 <div class="hidden-md hidden-lg col-xs-12">
-                    <a href="https://www.instagram.com/pitchesandnotes/" class="insta socButton">Instagram</a>
+                    <a href="https://www.facebook.com/pitchesandnotes/" class="facebook socButtonSmall">Facebook</a>
+                </div>
+            </div>
+            <div class="row hidden-md hidden-lg">
+                <div class="hidden-md hidden-lg col-xs-12">
+                    <a href="https://www.instagram.com/pitchesandnotes/" class="insta socButtonSmall">Instagram</a>
                 </div>
             </div>
             <div class="row">

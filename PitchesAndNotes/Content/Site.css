@@ -218,6 +218,7 @@ textarea {
     padding:10px;
     width:100px;
     text-align:center;
+    color:white;
 }
 
 .StartButton:hover{
@@ -244,6 +245,27 @@ textarea {
     position:relative;
     margin:10px;
     border-radius:20px;
+}
+
+.socButtonSmall{
+    font-size:15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:25px;
+    padding-right:25px;
+    position:relative;
+    margin:auto auto;
+    border-radius:20px;
+    display:block;
+    margin-top:25px;
+    max-width:80%;
+
+}
+
+.socButtonSmall:hover{
+    color:white;
+    text-decoration:none;
+    transition: ease-in .35s;
 }
 
 .socButton:hover{

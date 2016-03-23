@@ -8,6 +8,7 @@
         body.stop().animate({ scrollTop: 0 }, 2500, 'swing', function () {
         });
     });
+
 });
 
 $(window).bind("load", function () {
