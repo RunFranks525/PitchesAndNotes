@@ -14,7 +14,6 @@
 </section>
 <div class="row homeContent">
     <div class="col-xs-12 col-md-8 col-md-push-2">
-        <h2>Upcoming Events</h2>
         @if (User.IsInRole("Administrator"))
         {
             @Html.ActionLink("Update Events", "UpdateEvents", "Home")
@@ -23,7 +22,7 @@
         {
             <div class="row">
                 @foreach(var Event in Model.Events){
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <h3 class="eventTitle">@Event.Title</h3>
                         <h6 class="eventDate">@Event.Date.ToString("D")</h6>
                         <hr class="hrSec" />
@@ -101,11 +100,11 @@
     <div class="col-xs-12 col-md-8 col-md-push-2">
         <h2>Announcements</h2>
         @if (User.IsInRole("Admin"))
-            {
+         {
             @Html.ActionLink("Update Announcements", "UpdateAnnouncement", "Home")
         }
         <hr />
-        <p class="announcementText"> &mdash; Pitches and Notes will be performing their spring show, 'The Final Rose' on April 30th!</p>
+        <p class="announcementText"> &mdash; Pitches and Notes will be performing their winter show, 'The Rivalry Continues' on December 9th!</p>
     </div>
 </div>
 

@@ -19,7 +19,7 @@ namespace PitchesAndNotes.Controllers
             List<Event> Events = db.Events.ToList();
             if(Events.Count != 0)
             {
-                for(int i = 0; i < Events.Count; i++)
+                for(int i = Events.Count - 1; i >=0; i--)
                 {
                     hvm.Events.Add(Events[i]);
                     if(i == 2)
