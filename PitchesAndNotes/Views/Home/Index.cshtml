@@ -18,26 +18,35 @@
         {
             @Html.ActionLink("Update Events", "UpdateEvents", "Home")
         }
-        @if (Model.Events.Count > 0)
+        @if (Model.Event != null)
         {
             <div class="row">
-                @foreach(var Event in Model.Events){
-                    <div class="col-md-6">
-                        <h3 class="eventTitle">@Event.Title</h3>
-                        <h6 class="eventDate">@Event.Date.ToString("D")</h6>
+                    <div class="col-md-12">
+                        <h2 class="eventTitle text-center">@Model.Event.Title</h2>
+                        @if (Model.Event.Date.Date == System.DateTime.Today)
+                        {
+                            <h4 class="eventDate text-center">@Model.Event.Location - Today!</h4>
+                        }
+                        else
+                        {
+                            <h4 class="eventDate text-center">@Model.Event.Location - @Model.Event.Date.ToString("D")</h4>
+                        }
                         <hr class="hrSec" />
-                        <p class="edit" id="div_1">
-                            @Event.Description
-                        </p>
+                        <blockquote class="edit" id="div_1">
+                            @Model.Event.Description
+                        </blockquote>
                     </div>
-             }
             </div>
             <div class="row">
                 <div class="col-md-3 col-lg-push-9">
                     <br />
                     <br />
-                    @Html.ActionLink("More Events", "Events", "Home", new { @class = "btn btn-danger"}) 
-                    @*<button class="btn btn-danger">More Events <span class="glyphicon glyphicon-arrow-right"></span></button>*@
+                    @*@Html.ActionLink("Buy Tickets", "Events", "Home", new { @class = "btn btn-danger"})*@ 
+                    @if (Model.Event.TicketLink != null)
+                    {
+                        <a href="@Model.Event.TicketLink" class="btn btn-danger">Buy Tickets Online!</a>
+                    }
+                    <!--<button class="btn btn-danger">More Events <span class="glyphicon glyphicon-arrow-right"></span></button>-->
                     <br />
                     <br />
                 </div>
@@ -45,9 +54,12 @@
         }
         else
         {
-            <div class="col-xs-12">
-                <h4>No Upcoming Events at this time.</h4>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>No Upcoming Events at this time.</h4>
+                </div>
             </div>
+            
         }
     </div>
 </div>
@@ -64,20 +76,18 @@
             <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
+                    <img src="~/Content/2016.jpg" class="img-responsive" alt="..." />
+                </div>
+                <div class="item">
                     <img src="~/Content/groupShot.jpg" class="img-responsive" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
                 </div>
                 <div class="item">
                     <img src="~/Content/circle.jpg" class="img-responsive" alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
                 </div>
             </div>
             <!-- Controls -->

@@ -10,7 +10,9 @@
     <Property Name="Major" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Classification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="BucketList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FavoriteArtist" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="HomeTown" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityContainer Name="PitchesAndNotesEntities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Members" EntityType="Self.Member" />

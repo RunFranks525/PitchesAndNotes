@@ -4,13 +4,15 @@
     <EntitySetMapping Name="Members">
       <EntityTypeMapping TypeName="PitchesAndNotesModel.Member">
         <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="HomeTown" ColumnName="HomeTown" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="FavoriteArtist" ColumnName="FavoriteArtist" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Grade" ColumnName="Grade" />
           <ScalarProperty Name="Major" ColumnName="Major" />
           <ScalarProperty Name="Classification" ColumnName="Classification" />
           <ScalarProperty Name="BucketList" ColumnName="BucketList" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

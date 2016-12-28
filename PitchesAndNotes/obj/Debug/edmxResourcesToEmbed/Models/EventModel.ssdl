@@ -4,10 +4,12 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Title" Type="nchar" MaxLength="100" Nullable="false" />
-    <Property Name="Description" Type="nchar" MaxLength="400" Nullable="false" />
-    <Property Name="Date" Type="date" Nullable="false" />
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" />
+    <Property Name="TicketLink" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="PitchesAndNotesModel1StoreContainer">
     <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />

@@ -134,6 +134,6 @@ C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\Pitche
 C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.csprojResolveAssemblyReference.cache
 C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.dll
 C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.pdb
+C:\Users\RunFranks525\Documents\Workspace\PitchesAndNotes\PitchesAndNotes\PitchesAndNotes\obj\Debug\PitchesAndNotes.csprojResolveAssemblyReference.cache

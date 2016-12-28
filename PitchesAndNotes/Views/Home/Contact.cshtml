@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Dictionary<string, PitchesAndNotes.Models.Member>
+@{
     ViewBag.Title = "Contact";
 }
 <section class="titularRow photoHeader">
@@ -13,43 +14,44 @@
 </section>
 <section class="row">
     <section class="col-xs-12 col-xs-push-2">
+
         <p class="contactBlock">
-             <strong>Sarah Denton – President, Pitches and Notes</strong>
+             <strong>@Model["President"].Name - President </strong>
             <br />
             <a href="emailto:pitchesacappella@gmail.com">pitchesacappella@gmail.com</a>
         </p>
      
         <p class="contactBlock">
-            <strong>Claire Hietpas/Kelsey Pulera – Music Director</strong>
+            <strong>@Model["Music Director"].Name – Music Director</strong>
             <br />
             <a href="emailto:musicpitchesacappella@gmail.com">musicpitchesacappella@gmail.com</a>
         </p>
 
         <p class="contactBlock">
-            <strong>Lauren Dalzin – Business Manager</strong>
+            <strong>@Model["Business Manager"].Name – Business Manager</strong>
             <br />
             <a href="emailto:pitchesacappella@gmail.com">pitchesacappella@gmail.com</a>
         </p>
 
         <p class="contactBlock">
-            <strong>Amanda Applequist – Public Relations and Graphic Design</strong>
+            <strong>@Model["Advertising and Social Media Public Relations"].Name – Public Relations and Social Media</strong>
             <br />
-            <a href="pitchesandnotes.azurewebsites.net">Pitches and Notes Website</a>
+            <a href="pitchesandnotes.com">Pitches and Notes Website</a>
             <br />
             <a href="www.facebook.com/pitchesandnotes">Pitches and Notes Facebook</a>
             <br />
             <a href="www.twitter.com/acapitches">Pitches and Notes Twitter</a>
         </p>
 
-        <p class="contactBlock">
-            <strong>Sylvie Weintraub – Public Relations and Social Media</strong>
+        @*<p class="contactBlock">
+            <strong>Sabrina VandenHeuvel – Public Relations and Social Media</strong>
             <br />
-            <a href="pitchesandnotes.azurewebsites.net">Pitches and Notes Website</a>
+            <a href="pitchesandnotes.com">Pitches and Notes Website</a>
             <br />
             <a href="www.facebook.com/pitchesandnotes">Pitches and Notes Facebook</a>
             <br />
             <a href="www.twitter.com/acapitches">Pitches and Notes Twitter</a>
-        </p>
+        </p>*@
         <br />
         <br />
     </section>

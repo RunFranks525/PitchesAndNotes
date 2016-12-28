@@ -181,6 +181,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetUserRole.cs">
+      <DependentUpon>UserRoleModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Event.cs">
       <DependentUpon>EventModel.tt</DependentUpon>
     </Compile>
@@ -219,11 +222,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Member.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserRoleModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoleModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRoleModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRoleModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoleModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\2016.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\circle.jpg" />
@@ -239,28 +258,27 @@
     <Content Include="Content\grey.jpg" />
     <Content Include="Content\groupShot.jpg" />
     <Content Include="Content\groupShot1.png" />
-    <Content Include="Content\headshots\aApplequist.jpg" />
-    <Content Include="Content\headshots\aCorriveau.jpg" />
-    <Content Include="Content\headshots\aLawrence.jpg" />
-    <Content Include="Content\headshots\bConnors.jpg" />
-    <Content Include="Content\headshots\cHietpas.jpg" />
-    <Content Include="Content\headshots\eStover.jpg" />
-    <Content Include="Content\headshots\jGerlach.jpg" />
-    <Content Include="Content\headshots\kGibson.jpg" />
-    <Content Include="Content\headshots\kOvercamp.jpg" />
-    <Content Include="Content\headshots\kPulera.jpg" />
-    <Content Include="Content\headshots\lCarroll.jpg" />
-    <Content Include="Content\headshots\lDalzin.jpg" />
-    <Content Include="Content\headshots\lMei.jpg" />
-    <Content Include="Content\headshots\mTurnquist.jpg" />
-    <Content Include="Content\headshots\sShibbelhut.jpg" />
-    <Content Include="Content\headshots\sTackas.jpg" />
-    <Content Include="Content\headshots\sVandenHeuvel.jpg" />
-    <Content Include="Content\headshots\sWeintraub.jpg" />
+    <Content Include="Content\headshots\1.JPG" />
+    <Content Include="Content\headshots\10.JPG" />
+    <Content Include="Content\headshots\11.JPG" />
+    <Content Include="Content\headshots\12.JPG" />
+    <Content Include="Content\headshots\13.JPG" />
+    <Content Include="Content\headshots\14.JPG" />
+    <Content Include="Content\headshots\15.JPG" />
+    <Content Include="Content\headshots\16.JPG" />
+    <Content Include="Content\headshots\17.JPG" />
+    <Content Include="Content\headshots\18.JPG" />
+    <Content Include="Content\headshots\2.JPG" />
+    <Content Include="Content\headshots\3.jpg" />
+    <Content Include="Content\headshots\4.JPG" />
+    <Content Include="Content\headshots\5.jpg" />
+    <Content Include="Content\headshots\6.jpg" />
+    <Content Include="Content\headshots\7.JPG" />
+    <Content Include="Content\headshots\8.jpg" />
+    <Content Include="Content\headshots\9.JPG" />
     <Content Include="Content\isthmus.jpg" />
     <Content Include="Content\laurenShoe.png" />
     <Content Include="Content\memberCover.jpg" />
-    <Content Include="Content\headshots\sDenton.jpg" />
     <Content Include="Content\outsideLine.jpg" />
     <Content Include="Content\outsideLine.png" />
     <Content Include="Content\seats.jpg" />
@@ -292,6 +310,16 @@
       <DependentUpon>Member.edmx</DependentUpon>
       <LastGenOutput>Member1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\UserRoleModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserRoleModel.edmx</DependentUpon>
+      <LastGenOutput>UserRoleModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\UserRoleModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserRoleModel.edmx</DependentUpon>
+      <LastGenOutput>UserRoleModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\EventModel.edmx">
@@ -307,6 +335,13 @@
     </EntityDeploy>
     <Content Include="Models\Member.edmx.diagram">
       <DependentUpon>Member.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\UserRoleModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserRoleModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\UserRoleModel.edmx.diagram">
+      <DependentUpon>UserRoleModel.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\PitchesAndNotes.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -376,6 +411,7 @@
     <Content Include="Views\Home\AddAdministrators.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\IAmAPitch.cshtml" />
+    <Content Include="Views\Home\Donors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -34,6 +34,8 @@ namespace PitchesAndNotes.Models
 
         public System.Data.Entity.DbSet<PitchesAndNotes.Models.Member> Members { get; set; }
         public System.Data.Entity.DbSet<PitchesAndNotes.Models.Event> Events { get; set; }
+        public System.Data.Entity.DbSet<PitchesAndNotes.Models.RoleEntities> Role { get; }
+        public System.Data.Entity.DbSet<PitchesAndNotes.Models.UserRoleEntities> UserRoles { get; set; }
 
     }
 }

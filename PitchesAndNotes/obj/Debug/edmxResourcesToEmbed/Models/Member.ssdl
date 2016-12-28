@@ -10,7 +10,9 @@
     <Property Name="Major" Type="nvarchar(max)" />
     <Property Name="Classification" Type="nvarchar(max)" />
     <Property Name="BucketList" Type="nvarchar(max)" />
-    <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="FavoriteArtist" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Position" Type="nchar" MaxLength="150" />
+    <Property Name="HomeTown" Type="nchar" MaxLength="150" />
   </EntityType>
   <EntityContainer Name="PitchesAndNotesModelStoreContainer">
     <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />

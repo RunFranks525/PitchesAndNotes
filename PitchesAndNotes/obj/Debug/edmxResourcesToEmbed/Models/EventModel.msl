@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Events">
       <EntityTypeMapping TypeName="PitchesAndNotesModel1.Event">
         <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="TicketLink" ColumnName="TicketLink" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Date" ColumnName="Date" />

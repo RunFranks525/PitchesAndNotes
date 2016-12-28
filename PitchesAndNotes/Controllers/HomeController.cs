@@ -15,19 +15,15 @@ namespace PitchesAndNotes.Controllers
         public ActionResult Index()
         {
             HomeViewModel hvm = new HomeViewModel();
-            hvm.Events = new List<Event>();
-            List<Event> Events = db.Events.ToList();
-            if(Events.Count != 0)
+            try
             {
-                for(int i = Events.Count - 1; i >=0; i--)
-                {
-                    hvm.Events.Add(Events[i]);
-                    if(i == 2)
-                    {
-                        break;
-                    }
-                }        
+                Event nextEvent = db.Events.First(x => x.Date >= System.DateTime.Now);
+                hvm.Event = nextEvent;
+            } catch (System.InvalidOperationException ex)
+            {
+                hvm.Event = null;
             }
+           
 
             return View(hvm);
         }
@@ -39,9 +35,15 @@ namespace PitchesAndNotes.Controllers
             return View();
         }
 
+        public ActionResult Donations()
+        {
+            return View("Donors");
+        }
+
         public ActionResult Members()
         {
-            return View();
+
+            return View(db.Members.ToList());
         }
 
         [HttpGet]
@@ -101,9 +103,18 @@ namespace PitchesAndNotes.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            Dictionary<string, Member> positionMap = new Dictionary<string, Member>();
+            List<Member> members = db.Members.ToList();
+            foreach(Member member in members)
+            {
+                if(member.Position != null)
+                {
+                    string position = member.Position.Trim();
+                    member.Position = position;
+                    positionMap.Add(position, member);
+                }
+            }
+            return View(positionMap);
         }
 
         [HttpGet]
